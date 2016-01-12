@@ -7,21 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60A0FD7B1C45B4180009AACC /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A0FD7A1C45B4180009AACC /* MainViewController.m */; };
 		CC66198B1C45B0B6001287E3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC66198A1C45B0B6001287E3 /* main.m */; };
 		CC66198E1C45B0B6001287E3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC66198D1C45B0B6001287E3 /* AppDelegate.m */; };
-		CC6619911C45B0B6001287E3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6619901C45B0B6001287E3 /* ViewController.m */; };
 		CC6619941C45B0B6001287E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC6619921C45B0B6001287E3 /* Main.storyboard */; };
 		CC6619961C45B0B6001287E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC6619951C45B0B6001287E3 /* Assets.xcassets */; };
 		CC6619991C45B0B6001287E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC6619971C45B0B6001287E3 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		60A0FD791C45B4180009AACC /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		60A0FD7A1C45B4180009AACC /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		CC6619861C45B0B6001287E3 /* MySafari.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySafari.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC66198A1C45B0B6001287E3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CC66198C1C45B0B6001287E3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CC66198D1C45B0B6001287E3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CC66198F1C45B0B6001287E3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		CC6619901C45B0B6001287E3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		CC6619931C45B0B6001287E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CC6619951C45B0B6001287E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC6619981C45B0B6001287E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,11 +58,9 @@
 		CC6619881C45B0B6001287E3 /* MySafari */ = {
 			isa = PBXGroup;
 			children = (
-				CC66198C1C45B0B6001287E3 /* AppDelegate.h */,
-				CC66198D1C45B0B6001287E3 /* AppDelegate.m */,
-				CC66198F1C45B0B6001287E3 /* ViewController.h */,
-				CC6619901C45B0B6001287E3 /* ViewController.m */,
 				CC6619921C45B0B6001287E3 /* Main.storyboard */,
+				60A0FD791C45B4180009AACC /* MainViewController.h */,
+				60A0FD7A1C45B4180009AACC /* MainViewController.m */,
 				CC6619951C45B0B6001287E3 /* Assets.xcassets */,
 				CC6619971C45B0B6001287E3 /* LaunchScreen.storyboard */,
 				CC66199A1C45B0B6001287E3 /* Info.plist */,
@@ -74,6 +72,8 @@
 		CC6619891C45B0B6001287E3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CC66198C1C45B0B6001287E3 /* AppDelegate.h */,
+				CC66198D1C45B0B6001287E3 /* AppDelegate.m */,
 				CC66198A1C45B0B6001287E3 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -149,8 +149,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC6619911C45B0B6001287E3 /* ViewController.m in Sources */,
 				CC66198E1C45B0B6001287E3 /* AppDelegate.m in Sources */,
+				60A0FD7B1C45B4180009AACC /* MainViewController.m in Sources */,
 				CC66198B1C45B0B6001287E3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,6 +298,7 @@
 				CC66199F1C45B0B6001287E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

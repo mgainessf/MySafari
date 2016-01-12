@@ -8,7 +8,11 @@
 
 #import "MainViewController.h"
 
-@interface MainViewController ()
+@interface MainViewController () <UIWebViewDelegate, UITextFieldDelegate>
+
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
+@property (weak, nonatomic) IBOutlet UITextField *urlTextField;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityMonitor;
 
 @end
 
@@ -16,7 +20,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.webView.delegate = self;
+    self.urlTextField.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,14 +29,21 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(BOOL) textFieldShouldReturn:(UITextField *)textField {
+    NSURL *url = [NSURL URLWithString:self.urlTextField.text];
+    [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
+    return YES;
 }
-*/
 
+-(void) webViewDidStartLoad:(UIWebView *)webView {
+    [self.activityMonitor startAnimating];
+}
+
+-(void) webViewDidFinishLoad:(UIWebView *)webView {
+    [self.activityMonitor stopAnimating];
+}
+
+- (IBAction)onBackButtonPressed:(id)sender {
+    [self.webView goBack];
+}
 @end
